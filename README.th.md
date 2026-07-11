@@ -1,5 +1,8 @@
 # Lord of the Mysteries TTRPG — ระบบ FoundryVTT
 
+[![Foundry v14](https://img.shields.io/badge/Foundry-v14-orange.svg)](https://foundryvtt.com/)
+[![License: LGPL-3.0](https://img.shields.io/badge/License-LGPL%203.0-blue.svg)](LICENSE)
+
 **🌐 ภาษา / Language:** [ไทย](#คุณสมบัติ) ・ [English](README.md)
 
 ระบบ FoundryVTT ที่สร้างขึ้นเองสำหรับ Lord of the Mysteries TTRPG นำโลกของ Beyonder, Sequence และ Pathway จากผลงานของ Cuttlefish That Loves Diving มาสู่โต๊ะเกมเสมือนจริง สร้างและดูแลโดย **NekoAida**
@@ -115,6 +118,13 @@ system.json             # ไฟล์ manifest ระบบ FoundryVTT
 template.json           # คำจำกัดความประเภท Actor & Item
 ```
 
+## การร่วมสมทบ (Contributing)
+
+เรายินดีรับการรายงานบั๊ก คำขอฟีเจอร์ใหม่ และ pull requests จากทุกคน
+
+- **Issues** — ใช้ GitHub Issues เพื่อรายงานบั๊กหรือขอฟีเจอร์ กรุณาค้นหา issue ที่มีอยู่ก่อนเปิดใหม่
+- **Pull Requests** — fork repo นี้, ทำการเปลี่ยนแปลงใน feature branch, และเปิด PR ไปที่ main กรุณาอ่าน [CONTRIBUTING.th.md](CONTRIBUTING.th.md) ก่อนส่ง
+
 ## แผนงานในอนาคต
 
 - [ ] ประเภท Actor NPC / ศัตรู พร้อมชีทแบบย่อ
@@ -135,4 +145,4 @@ template.json           # คำจำกัดความประเภท Ac
 
 ## สัญญาอนุญาต
 
-โปรเจกต์นี้อยู่ภายใต้สัญญาอนุญาต [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html) ดูรายละเอียดที่ [LICENSE](LICENSE)
+โปรเจกต์นี้อยู่ภายใต้สัญญาอนุญาต GNU Lesser General Public License (LGPL-3.0) ดูรายละเอียดที่ [LICENSE](LICENSE)

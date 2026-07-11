@@ -1,5 +1,8 @@
 # Lord of the Mysteries TTRPG — FoundryVTT System
 
+[![Foundry v14](https://img.shields.io/badge/Foundry-v14-orange.svg)](https://foundryvtt.com/)
+[![License: LGPL-3.0](https://img.shields.io/badge/License-LGPL%203.0-blue.svg)](LICENSE)
+
 **🌐 Language / ภาษา:** [English](#features) ・ [ไทย](README.th.md)
 
 A custom-built FoundryVTT system for the Lord of the Mysteries TTRPG, bringing Cuttlefish That Loves Diving's world of Beyonders, Sequences, and Pathways to the virtual tabletop. Created and maintained by **NekoAida**.
@@ -115,6 +118,13 @@ system.json             # FoundryVTT system manifest
 template.json           # Actor & Item type definitions
 ```
 
+## Contributing
+
+We welcome bug reports, feature requests, and pull requests from everyone.
+
+- **Issues** — use GitHub Issues to report bugs or request features. Please search existing issues before opening a new one.
+- **Pull Requests** — fork the repo, make your changes on a feature branch, and open a PR against main. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting.
+
 ## Roadmap
 
 - [ ] NPC / Enemy actor type with simplified sheets
@@ -135,4 +145,4 @@ This system is a fan-made project and is not affiliated with or endorsed by the 
 
 ## License
 
-This project is licensed under the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html). See [LICENSE](LICENSE) for details.
+This project is licensed under the GNU Lesser General Public License (LGPL-3.0). See [LICENSE](LICENSE) for details.
