@@ -1,0 +1,33 @@
+{
+  "id": "lotm",
+  "title": "Lord of the Mysteries TTRPG",
+  "description": "A custom system for the Lord of the Mysteries TTRPG.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 14,
+    "verified": 14,
+    "maximum": 14
+  },
+  "authors": [
+    {
+      "name": "NekoAida"
+    }
+  ],
+  "esmodules": [
+    "module/lotm.mjs"
+  ],
+  "styles": [
+    "css/lotm.css"
+  ],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "socket": true,
+  "manifest": "https://github.com/NekoAida/Lord-of-the-Mysteries-TTRPG/releases/latest/download/system.json",
+  "download": "https://github.com/NekoAida/Lord-of-the-Mysteries-TTRPG/releases/latest/download/lotm.zip"
+}

@@ -1,0 +1,63 @@
+<form class="{{cssClass}}" autocomplete="off">
+  
+  {{!-- Item Header --}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    
+    <div class="header-details">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/>
+      </h1>
+      <div class="item-type-label">
+        {{#if isPotion}}Potion Formula{{/if}}
+        {{#if isSealedArtifact}}Sealed Artifact{{/if}}
+        {{#if isPathwayPower}}Pathway Power{{/if}}
+      </div>
+    </div>
+  </header>
+
+  {{!-- Item Body --}}
+  <section class="sheet-body item-body">
+    
+    {{!-- Potion Formula Layout --}}
+    {{#if isPotion}}
+    <div class="item-section">
+      <h3>Ingredients & Ritual</h3>
+      <div class="editor-container">
+        {{editor enriched.ingredients target="system.ingredients" engine="prosemirror" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- Sealed Artifact Layout --}}
+    {{#if isSealedArtifact}}
+    <div class="item-section">
+      <h3>Description</h3>
+      <div class="editor-container">
+        {{editor enriched.description target="system.description" engine="prosemirror" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    <div class="item-section">
+      <h3 class="danger-text">Negative Effects</h3>
+      <div class="editor-container">
+        {{editor enriched.negativeEffects target="system.negativeEffects" engine="prosemirror" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- Pathway Power Layout --}}
+    {{#if isPathwayPower}}
+    <div class="item-section sequence-req">
+      <h3>Sequence Requirement</h3>
+      <input type="number" name="system.sequenceRequirement" value="{{system.sequenceRequirement}}" min="0" max="9" />
+    </div>
+    <div class="item-section">
+      <h3>Power Effect</h3>
+      <div class="editor-container">
+        {{editor enriched.powerEffect target="system.powerEffect" engine="prosemirror" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    {{/if}}
+
+  </section>
+</form>

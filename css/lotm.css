@@ -1,0 +1,377 @@
+/* Import Google Fonts for a Victorian/Cosmic Horror feel */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700&display=swap');
+
+/* Main Sheet Overrides */
+.lotm.sheet .window-content {
+  background: #0b111a;
+  background-image: radial-gradient(circle, #1a2432 0%, #05080c 100%);
+  color: #cdd6e0;
+  font-family: 'Crimson Text', serif;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+/* Customizing the Outer Window Frame (Silver/Chrome Steampunk vibe) */
+.lotm.sheet {
+  border: 1px solid #9aa5b1;
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(154, 165, 177, 0.2);
+}
+
+.lotm.sheet h1, .lotm.sheet h2, .lotm.sheet h3, .lotm.sheet h4 {
+  font-family: 'Playfair Display', serif;
+  color: #e2e8f0;
+  text-shadow: 2px 2px 4px #000;
+  margin: 0;
+}
+
+/* Header */
+.lotm .sheet-header {
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid #4a5568;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.lotm .profile-img {
+  flex: 0 0 120px;
+  height: 120px;
+  border: 2px solid #9aa5b1;
+  border-radius: 4px;
+  background: #000;
+  box-shadow: 0 0 8px #000;
+  object-fit: cover;
+}
+
+.lotm.sheet.item .profile-img {
+  flex: 0 0 80px;
+  height: 80px;
+}
+
+.lotm .header-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lotm .charname input {
+  font-size: 32px;
+  font-weight: bold;
+  height: auto;
+  border: none;
+  border-bottom: 1px solid #9aa5b1;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 1px 1px 3px black;
+  width: 100%;
+}
+.lotm .charname input:focus {
+  box-shadow: none;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.lotm .item-type-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.lotm .sequence-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lotm .sequence-box label {
+  font-size: 20px;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+}
+.lotm .sequence-box input {
+  width: 60px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  background: #1a202c;
+  color: #ffffff;
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+  font-family: 'Crimson Text', serif;
+}
+
+/* Madness Bar */
+.lotm .madness-section {
+  margin-bottom: 25px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #2d3748;
+  border-radius: 4px;
+  box-shadow: inset 0 0 10px #000;
+}
+
+.lotm .madness-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.lotm .madness-label {
+  flex: 0 0 130px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff6b6b;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'Playfair Display', serif;
+}
+.lotm .madness-bar {
+  flex: 1;
+  height: 24px;
+  background: #000;
+  border: 2px solid #718096;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+.lotm .madness-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4a0000, #b21f1f, #f53d3d);
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
+  transition: width 0.4s ease-out;
+}
+.lotm .madness-bar-container input {
+  width: 60px;
+  text-align: center;
+  background: #1a202c;
+  color: #fff;
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+}
+
+/* Sections & Textareas */
+.lotm .anchor-section, .lotm .item-section {
+  margin-bottom: 25px;
+}
+.lotm .anchor-section h2, .lotm .item-section h3 {
+  font-size: 22px;
+  border-bottom: 1px solid #4a5568;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+.lotm .item-section h3.danger-text {
+  color: #fc8181;
+}
+
+.lotm textarea {
+  width: 100%;
+  height: 90px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #e2e8f0;
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  padding: 8px;
+  resize: vertical;
+}
+.lotm textarea:focus {
+  border-color: #a0aec0;
+  box-shadow: 0 0 5px rgba(160, 174, 192, 0.5);
+}
+
+/* Item Specific Sections */
+.lotm .sequence-req {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.lotm .sequence-req h3 {
+  border-bottom: none;
+  margin: 0;
+}
+.lotm .sequence-req input {
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  background: #1a202c;
+  color: #ffffff;
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+}
+
+/* Foundry Editor styling override */
+.lotm .editor-container {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+  padding: 8px;
+  min-height: 150px;
+}
+.lotm .editor-content {
+  color: #e2e8f0;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+}
+.lotm .editor-content p {
+  margin-bottom: 10px;
+}
+
+/* Items List */
+.lotm .items-section h2 {
+  font-size: 26px;
+  border-bottom: 2px solid #4a5568;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.lotm .item-list {
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #2d3748;
+  border-radius: 4px;
+}
+
+.lotm .list-header {
+  background: linear-gradient(180deg, #2d3748, #1a202c);
+  color: #e2e8f0;
+  padding: 8px 12px;
+  font-size: 20px;
+  border-bottom: 1px solid #4a5568;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.lotm .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #2d3748;
+}
+.lotm .item:last-child {
+  border-bottom: none;
+}
+.lotm .item:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.lotm .item-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lotm .item-name img {
+  border: 1px solid #718096;
+  border-radius: 4px;
+  background: #000;
+}
+.lotm .item-name h4 {
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  color: #e2e8f0;
+  text-shadow: none;
+}
+
+.lotm .item-controls {
+  display: flex;
+  gap: 12px;
+}
+.lotm .item-control {
+  color: #718096;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+.lotm .item-control:hover {
+  color: #cbd5e0;
+}
+
+.lotm .empty-list {
+  padding: 10px 12px;
+  color: #718096;
+  font-style: italic;
+}
+
+/* Chat Messages */
+.lotm-chat-message.fatal-madness {
+  background: #2b0808;
+  border: 1px solid #fc8181;
+  color: #fc8181;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+  box-shadow: inset 0 0 15px rgba(252, 129, 129, 0.2);
+}
+.lotm-chat-message.fatal-madness h2 {
+  font-family: 'Playfair Display', serif;
+  color: #ff3333;
+  margin-bottom: 8px;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px #000;
+}
+.lotm-chat-message.fatal-madness p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.lotm.chat-card {
+  background: #0b111a;
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+  color: #e2e8f0;
+  padding: 10px;
+  font-family: 'Crimson Text', serif;
+}
+.lotm.chat-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #4a5568;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+.lotm.chat-card .card-header img {
+  border: 1px solid #9aa5b1;
+  border-radius: 4px;
+  background: #000;
+  object-fit: cover;
+}
+.lotm.chat-card .card-header h3 {
+  font-family: 'Playfair Display', serif;
+  color: #9aa5b1;
+  margin: 0;
+  font-size: 18px;
+  text-shadow: none;
+}
+.lotm.chat-card .dice-roll .dice-result {
+  margin-top: 5px;
+}
+.lotm.chat-card .dice-roll .dice-total {
+  background: rgba(0,0,0,0.5);
+  border: 1px solid #4a5568;
+  color: #e2e8f0;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  padding: 8px;
+  box-shadow: inset 0 0 5px #000;
+}
+.lotm.chat-card .dice-roll .dice-total.critical {
+  color: #68d391;
+  border-color: #68d391;
+  box-shadow: inset 0 0 10px rgba(104, 211, 145, 0.2);
+}
+.lotm.chat-card .dice-roll .dice-total.fumble {
+  color: #fc8181;
+  border-color: #fc8181;
+  box-shadow: inset 0 0 10px rgba(252, 129, 129, 0.2);
+}

@@ -1,0 +1,14 @@
+{
+  "Actor": {
+    "types": [
+      "beyonder"
+    ]
+  },
+  "Item": {
+    "types": [
+      "potion_formula",
+      "sealed_artifact",
+      "pathway_power"
+    ]
+  }
+}
