@@ -19,6 +19,9 @@ export class LOTMItemSheet extends ItemSheet {
     context.isPotion = this.item.type === "potion_formula";
     context.isSealedArtifact = this.item.type === "sealed_artifact";
     context.isPathwayPower = this.item.type === "pathway_power";
+    context.isWeapon = this.item.type === "weapon";
+    context.isArmor = this.item.type === "armor";
+    context.isGear = this.item.type === "gear";
 
     // Enrich HTML for ProseMirror editors
     context.enriched = {};
@@ -29,6 +32,8 @@ export class LOTMItemSheet extends ItemSheet {
       context.enriched.negativeEffects = await TextEditor.enrichHTML(context.system.negativeEffects, { async: true });
     } else if (context.isPathwayPower) {
       context.enriched.powerEffect = await TextEditor.enrichHTML(context.system.powerEffect, { async: true });
+    } else if (context.isWeapon || context.isArmor || context.isGear) {
+      context.enriched.description = await TextEditor.enrichHTML(context.system.description, { async: true });
     }
 
     return context;

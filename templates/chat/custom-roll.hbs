@@ -1,7 +1,7 @@
 <div class="lotm chat-card custom-roll">
   <header class="card-header">
     <img src="{{actor.img}}" title="{{actor.name}}" width="36" height="36"/>
-    <h3>{{actor.name}} checks their Fate</h3>
+    <h3>{{actor.name}} {{#if title}}{{title}}{{else}}rolls {{#if actionName}}{{actionName}}{{else}}Fate{{/if}}{{/if}}</h3>
   </header>
 
   <div class="card-content">
@@ -15,4 +15,14 @@
       </div>
     </div>
   </div>
+
+  {{#if skillKey}}
+    <div class="card-buttons">
+      {{#if isPushed}}
+        <button class="apply-madness-penalty" data-actor-id="{{actor._id}}"><i class="fas fa-biohazard"></i> Apply Penalty (Failed Push)</button>
+      {{else}}
+        <button class="push-roll" data-actor-id="{{actor._id}}" data-skill-key="{{skillKey}}"><i class="fas fa-redo"></i> Push the Roll</button>
+      {{/if}}
+    </div>
+  {{/if}}
 </div>

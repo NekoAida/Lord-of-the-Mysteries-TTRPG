@@ -19,7 +19,14 @@
   "styles": [
     "css/lotm.css"
   ],
-  "packs": [],
+  "packs": [
+    {
+      "name": "pathway-the-fool",
+      "label": "Pathway: The Fool",
+      "path": "packs/pathway-the-fool.db",
+      "type": "Item"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
@@ -37,7 +44,12 @@
     "Item": {
       "potionFormula": {},
       "sealedArtifact": {},
-      "pathwayPower": {}
+      "pathwayPower": {},
+      "weapon": {},
+      "armor": {},
+      "gear": {},
+      "ancestry": {},
+      "background": {}
     }
   }
 }

@@ -12,6 +12,9 @@
         {{#if isPotion}}Potion Formula{{/if}}
         {{#if isSealedArtifact}}Sealed Artifact{{/if}}
         {{#if isPathwayPower}}Pathway Power{{/if}}
+        {{#if isWeapon}}Weapon{{/if}}
+        {{#if isArmor}}Armor{{/if}}
+        {{#if isGear}}Gear{{/if}}
       </div>
     </div>
   </header>
@@ -55,6 +58,60 @@
       <h3>Power Effect</h3>
       <div class="editor-container">
         {{editor enriched.powerEffect target="system.powerEffect" engine="prosemirror" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- Weapon Layout --}}
+    {{#if isWeapon}}
+    <div class="item-section sequence-req">
+      <h3>Damage Formula</h3>
+      <input type="text" name="system.damage" value="{{system.damage}}" style="width: 150px;" />
+    </div>
+    <div class="item-section sequence-req">
+      <h3>Weight (lbs)</h3>
+      <input type="number" name="system.weight" value="{{system.weight}}" min="0" />
+    </div>
+    <div class="item-section">
+      <h3>Description</h3>
+      <div class="editor-container">
+        {{editor enriched.description target="system.description" engine="prosemirror" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- Armor Layout --}}
+    {{#if isArmor}}
+    <div class="item-section sequence-req">
+      <h3>Defense Bonus</h3>
+      <input type="number" name="system.defense" value="{{system.defense}}" />
+    </div>
+    <div class="item-section sequence-req">
+      <h3>Weight (lbs)</h3>
+      <input type="number" name="system.weight" value="{{system.weight}}" min="0" />
+    </div>
+    <div class="item-section">
+      <h3>Description</h3>
+      <div class="editor-container">
+        {{editor enriched.description target="system.description" engine="prosemirror" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- Gear Layout --}}
+    {{#if isGear}}
+    <div class="item-section sequence-req">
+      <h3>Quantity</h3>
+      <input type="number" name="system.quantity" value="{{system.quantity}}" min="0" />
+    </div>
+    <div class="item-section sequence-req">
+      <h3>Weight (lbs)</h3>
+      <input type="number" name="system.weight" value="{{system.weight}}" min="0" />
+    </div>
+    <div class="item-section">
+      <h3>Description</h3>
+      <div class="editor-container">
+        {{editor enriched.description target="system.description" engine="prosemirror" button=true owner=owner editable=editable}}
       </div>
     </div>
     {{/if}}
