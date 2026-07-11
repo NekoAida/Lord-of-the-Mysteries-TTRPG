@@ -25,6 +25,18 @@
       "label": "Pathway: The Fool",
       "path": "packs/pathway-the-fool.db",
       "type": "Item"
+    },
+    {
+      "name": "ancestries",
+      "label": "Ancestries",
+      "path": "packs/ancestries.db",
+      "type": "Item"
+    },
+    {
+      "name": "backgrounds",
+      "label": "Backgrounds",
+      "path": "packs/backgrounds.db",
+      "type": "Item"
     }
   ],
   "languages": [

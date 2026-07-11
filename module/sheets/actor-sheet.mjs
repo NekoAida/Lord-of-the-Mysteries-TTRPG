@@ -1,3 +1,5 @@
+import { CharacterBuilderApp } from "../apps/character-builder.mjs";
+
 export class LOTMActorSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
@@ -22,6 +24,9 @@ export class LOTMActorSheet extends ActorSheet {
     context.system.sequence = context.system.sequence ?? 10;
     
     context.encumbrance = this.actor.system.encumbrance || { value: 0, max: 0, pct: 0 };
+    
+    // Determine if Character Builder is needed
+    context.needsBuilder = (context.system.sequence === 10 && (!context.system.ancestry || context.system.ancestry === ""));
     
     // Prepare Sequence Display Options
     context.sequenceOptions = [
@@ -131,6 +136,12 @@ export class LOTMActorSheet extends ActorSheet {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
       await item.update({"system.equipped": !item.system.equipped});
+    });
+
+    // Character Builder
+    html.find('.launch-builder').click(ev => {
+      ev.preventDefault();
+      new CharacterBuilderApp(this.actor).render(true);
     });
 
     // Skill Rolls

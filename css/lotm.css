@@ -722,3 +722,102 @@
   border-color: #fc8181;
   box-shadow: inset 0 0 10px rgba(252, 129, 129, 0.2);
 }
+
+/* Character Builder Overlay */
+.lotm.character-builder {
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Playfair Display', serif;
+}
+.character-builder-form {
+  padding: 20px;
+}
+.builder-header {
+  text-align: center;
+  border-bottom: 2px solid #4a5568;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.builder-header h1 {
+  font-size: 32px;
+  color: #63b3ed;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+.builder-header p {
+  color: #a0aec0;
+  font-style: italic;
+}
+.builder-section {
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border: 1px solid #2d3748;
+  border-radius: 8px;
+}
+.builder-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #e2e8f0;
+  border-bottom: 1px solid #4a5568;
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+.builder-section .notes {
+  font-size: 14px;
+  color: #a0aec0;
+  margin-bottom: 10px;
+}
+.builder-section .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.builder-section label {
+  font-weight: bold;
+  color: #a0aec0;
+}
+.builder-section select, .builder-section input {
+  background: #1a202c;
+  color: #fff;
+  border: 1px solid #4a5568;
+  padding: 8px;
+  border-radius: 4px;
+  font-family: 'Crimson Text', serif;
+  font-size: 16px;
+}
+.attributes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.attr-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.attr-input label {
+  font-size: 16px;
+}
+.attr-input input {
+  width: 60px;
+  text-align: center;
+  font-size: 20px;
+}
+.sheet-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+.sheet-footer button {
+  background: linear-gradient(135deg, #2c5282, #1a202c);
+  color: white;
+  border: 1px solid #4a5568;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Crimson Text', serif;
+}
+.sheet-footer button:hover {
+  background: linear-gradient(135deg, #3182ce, #2c5282);
+}

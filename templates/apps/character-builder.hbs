@@ -1,0 +1,67 @@
+<form class="character-builder-form" autocomplete="off">
+  <header class="builder-header">
+    <h1>Create Your Character</h1>
+    <p>Select your origins and define your core attributes.</p>
+  </header>
+
+  <section class="builder-section">
+    <h2>1. Ancestry</h2>
+    <div class="form-group">
+      <label>Choose Ancestry</label>
+      <select name="ancestry">
+        <option value="">-- Select Ancestry --</option>
+        {{#each ancestries}}
+          <option value="{{this._id}}">{{this.name}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </section>
+
+  <section class="builder-section">
+    <h2>2. Background</h2>
+    <div class="form-group">
+      <label>Choose Background</label>
+      <select name="background">
+        <option value="">-- Select Background --</option>
+        {{#each backgrounds}}
+          <option value="{{this._id}}">{{this.name}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </section>
+
+  <section class="builder-section">
+    <h2>3. Attributes</h2>
+    <p class="notes">Allocate points to your core attributes (Base 10).</p>
+    <div class="attributes-grid">
+      <div class="attr-input">
+        <label>Physique</label>
+        <input type="number" name="physique" value="10" min="1" max="20" />
+      </div>
+      <div class="attr-input">
+        <label>Agility</label>
+        <input type="number" name="agility" value="10" min="1" max="20" />
+      </div>
+      <div class="attr-input">
+        <label>Intellect</label>
+        <input type="number" name="intellect" value="10" min="1" max="20" />
+      </div>
+      <div class="attr-input">
+        <label>Perception</label>
+        <input type="number" name="perception" value="10" min="1" max="20" />
+      </div>
+      <div class="attr-input">
+        <label>Willpower</label>
+        <input type="number" name="willpower" value="10" min="1" max="20" />
+      </div>
+      <div class="attr-input">
+        <label>Presence</label>
+        <input type="number" name="presence" value="10" min="1" max="20" />
+      </div>
+    </div>
+  </section>
+
+  <footer class="sheet-footer">
+    <button type="submit"><i class="fas fa-check"></i> Finalize Character</button>
+  </footer>
+</form>
