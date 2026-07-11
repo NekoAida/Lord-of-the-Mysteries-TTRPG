@@ -21,9 +21,9 @@
   ],
   "packs": [
     {
-      "name": "pathway-the-fool",
-      "label": "Pathway: The Fool",
-      "path": "packs/pathway-the-fool.db",
+      "name": "pathways",
+      "label": "Pathways of the Divine",
+      "path": "packs/pathways.db",
       "type": "Item"
     },
     {
