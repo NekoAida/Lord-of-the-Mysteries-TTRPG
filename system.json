@@ -29,5 +29,15 @@
   ],
   "socket": true,
   "manifest": "https://github.com/NekoAida/Lord-of-the-Mysteries-TTRPG/releases/latest/download/system.json",
-  "download": "https://github.com/NekoAida/Lord-of-the-Mysteries-TTRPG/releases/latest/download/lotm.zip"
+  "download": "https://github.com/NekoAida/Lord-of-the-Mysteries-TTRPG/releases/latest/download/lotm.zip",
+  "documentTypes": {
+    "Actor": {
+      "beyonder": {}
+    },
+    "Item": {
+      "potionFormula": {},
+      "sealedArtifact": {},
+      "pathwayPower": {}
+    }
+  }
 }
