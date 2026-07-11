@@ -44,6 +44,11 @@
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
+    },
+    {
+      "lang": "th",
+      "name": "ไทย",
+      "path": "lang/th.json"
     }
   ],
   "socket": true,
